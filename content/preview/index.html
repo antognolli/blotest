@@ -1,0 +1,10 @@
+-----
+title: Previewed posts
+kind: page
+-----
+
+<ul>
+<% articles_sort(items_for_preview).each do |a| %>
+<%= a.compiled_content :rep => :home, :snapshot => :post %>
+<% end %>
+</ul>

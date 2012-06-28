@@ -1,0 +1,21 @@
+---
+title: Home
+kind: page
+---
+
+<% pages = sorted_articles.slice(0, @config[:page_size]) %>
+<% pages.each do |article| %>
+<div class="row-fluid">
+  <div class="span12">
+  <%= article.compiled_content :rep => :home, :snapshot => :post %>
+  </div>
+</div>
+<% end %>
+<div class="row-fluid">
+  <div class="span12">
+    <!-- <a href="#">&laquo Newer</a>-->
+    <% if articles.length > pages.length %>
+      <a class="pull-right" href="/page/2/">Older &raquo</a>
+    <% end %>
+  </div>
+</div>

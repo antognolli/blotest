@@ -1,0 +1,26 @@
+This is a template of a blog using nanoc. It can be used to easily deploy a new
+statically generated blog with nanoc, including some already implemented
+features:
+ - posts pagination;
+ - twitter, facebook and google+ buttons;
+ - intense debate comments;
+ - google analytics;
+ - twitter bootstrap theme;
+ - tags on sidebar;
+ - atom feeds;
+
+Installation
+============
+
+Just install nanoc and some more gems to build it. Then, on the root folder,
+run:
+
+ nanoc co
+ nanoc view (only if you want to run the local server)
+
+gems dependency:
+ - builder
+ - nokogiri - dependencies required (rdoc, rdoc-data, libxslt)
+ - coderay
+ - kramdown
+ - adsf (run local server for debugging)

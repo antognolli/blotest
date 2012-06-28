@@ -1,0 +1,12 @@
+<h3><%= link_to_unless_current(@item[:title], @item) %></h3>
+<small>Posted on <%= @item[:created_at] %> in <%= my_button_tags_for(@item, :base_url =>"/tags/", :separator=>' ') %></small>
+<p></p>
+<%= yield %>
+<p><%= fb_share_button %></p>
+<p><%= twitter_share_button %></p>
+<p><%= gplus_button %></p>
+<% if @item_rep.name == :home %>
+<p><%= link_to("comments &raquo", @item, :class=>"btn") %></p>
+<div class="span1">
+</div>
+<% end %>
