@@ -21,13 +21,25 @@ def create_tag_page(base, tag, count)
 end
 
 def create_tag_feed_page(base, tag, format)
+    title = @config[:title]
     f = format.downcase
     meta = {}
-    meta[:title] = "Antognolli's blog - Tag '#{tag}' (#{format} Feed)"
+    meta[:title] = "#{title} - Tag '#{tag}' (#{format} Feed)"
     meta[:kind] = 'feed'
     meta[:permalink] = "tags/#{tag}/#{f}"
     contents = %{<%= #{f}_feed(:articles => items_with_tag('#{tag}'))%>}
     create_item base + tag + "-#{f}/", meta, contents
+end
+
+def create_base_feed_page(base, format)
+    title = @config[:title]
+    f = format.downcase
+    meta = {}
+    meta[:title] = "#{title} (#{format} Feed)"
+    meta[:kind] = 'feed'
+    meta[:permalink] = base + "feed/"
+    contents = %{<%= atom_feed %>}
+    create_item base + "feed/", meta, contents
 end
 
 def create_old_page(base, idx, last_idx, num)

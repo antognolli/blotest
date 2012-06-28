@@ -23,6 +23,7 @@ preprocess do
     end
   end
 
+  create_base_feed_page "/", "Atom"
   writetags
   paginate @config[:page_size]
 end
