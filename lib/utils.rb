@@ -12,7 +12,7 @@ def create_tag_page(base, tag, count)
         <p>#{count} item#{pl} tagged with <em>#{tag}</em> (<%= link_to("subscribe", relative_path_to(feed)) %>):</p>
             <ul>
             <% articles_sort(items_with_tag('#{tag}')).each do |a| %>
-            <%= a.compiled_content :rep => :home, :snapshot => :post %>
+            <%= a.compiled_content :rep => :intro, :snapshot => :post %>
             <% end %>
             </ul>
     }
@@ -67,7 +67,7 @@ def create_old_page(base, idx, last_idx, num)
         <% pages.each do |a| %>
         <div class="row-fluid">
           <div class="span12">
-            <%= a.compiled_content :rep => :home, :snapshot => :post %>
+            <%= a.compiled_content :rep => :intro, :snapshot => :post %>
           </div>
         </div>
         <% end %>

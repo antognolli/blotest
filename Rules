@@ -44,13 +44,6 @@ compile '/posts/*/' do
   layout 'default'
 end
 
-compile '/posts/*/', :rep => :home do
-  filter :erb
-  filter :colorize_syntax
-  filter :kramdown
-  layout 'post_layout'
-end
-
 compile '/posts/*/', :rep => :intro do
   filter :erb
   filter :colorize_syntax

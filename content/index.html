@@ -7,7 +7,16 @@ kind: page
 <% pages.each do |article| %>
 <div class="row-fluid">
   <div class="span12">
-  <%= article.compiled_content :rep => :home, :snapshot => :post %>
+    <h3><%= link_to_unless_current(article[:title], relative_path_to(article)) %></h3>
+    <small>Posted on <%= article[:created_at] %> in <%= my_button_tags_for(article, :base_url =>"/tags/", :separator=>' ') %></small>
+    <p></p>
+    <%= article.compiled_content :rep => :intro, :snapshot => :post %>
+    <p><%= fb_share_button %></p>
+    <p><%= twitter_share_button %></p>
+    <p><%= gplus_button %></p>
+    <p><%= link_to("comments &raquo", relative_path_to(article), :class=>"btn") %></p>
+    <div class="span1">
+    </div>
   </div>
 </div>
 <% end %>

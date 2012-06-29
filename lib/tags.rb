@@ -26,11 +26,13 @@ def writetags
 end
 
 def my_link_for_tag(tag, base_url, params={})
+    base_url = relative_path_to(base_url)
     label = params[:label] || tag
     %[<a href="#{h base_url}#{h tag}" rel="tag">#{label}</a>]
 end
 
 def my_button_for_tag(tag, base_url)
+  base_url = relative_path_to(base_url)
   %[<a class="btn btn-mini" href="#{h base_url}#{h tag}" rel="tag">#{h tag}</a>]
 end
 
