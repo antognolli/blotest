@@ -9,7 +9,7 @@ def create_tag_page(base, tag, count)
     pl = (count == 1) ? ' is' : 's are'
     contents = %{
         <% feed = "/tags/#{tag}-atom/" %>
-        <p>#{count} item#{pl} tagged with <em>#{tag}</em> (<%= link_to("subscribe", feed) %>):</p>
+        <p>#{count} item#{pl} tagged with <em>#{tag}</em> (<%= link_to("subscribe", relative_path_to(feed)) %>):</p>
             <ul>
             <% articles_sort(items_with_tag('#{tag}')).each do |a| %>
             <%= a.compiled_content :rep => :home, :snapshot => :post %>
@@ -124,6 +124,7 @@ end
 def my_link_to(text, target, attributes={})
   # Find path
   path = target.is_a?(String) ? target : target.path
+  target = relative_path_to(target)
 
   if @item_rep && @item_rep.path == path
     # Create message

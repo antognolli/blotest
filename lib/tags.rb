@@ -35,7 +35,7 @@ def my_button_for_tag(tag, base_url)
 end
 
 def my_button_tags_for(item, params={})
-  base_url  = params[:base_url]  || 'http://antognolli.org/tag/'
+  base_url  = params[:base_url]  || @config[:base_url] + '/tags/'
   none_text = params[:none_text] || '(none)'
   separator = params[:separator] || ', '
 

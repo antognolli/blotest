@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title><%= @config[:title] %> - <%= @item[:title] %></title>
 
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="<%= relative_path_to('/css/bootstrap.min.css') %>" media="screen">
 
     <style type="text/css">
       body {
@@ -16,7 +16,7 @@
       }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="<%= relative_path_to('/css/bootstrap-responsive.min.css') %>" media="screen">
     <meta name="generator" content="nanoc 3.2.1">
     <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, initial-scale=1.0" />
     <%= google_analytics %>
@@ -79,7 +79,7 @@
           <div>
           <ul class="nav nav-list">
             <li class="nav-header">Meta</li>
-            <li><%= link_to("Subscribe (rss)", feed) %></li>
+            <li><%= link_to("Subscribe (rss)", relative_path_to(feed)) %></li>
           </ul>
           </div>
         </div>
@@ -90,8 +90,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/js/jquery-1.7.2.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="<%= relative_path_to('/js/jquery-1.7.2.min.js') %>"></script>
+    <script src="<%= relative_path_to('/js/bootstrap.min.js') %>"></script>
     <%= fb_script %>
     <%= twitter_script %>
     <%= gplus_script %>
