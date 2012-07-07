@@ -20,7 +20,7 @@ index_filenames: [ 'index.html' ]
 enable_output_diff: false
 
 title: "Tester's blog"
-subtitle: "Testing what needs to be tested."
+subtitle: ""
 base_url: "http://rachacuca.org/~antognolli/testing/"
 author_name: "Tester Junior"
 author_uri: "http://rachacuca.org/~antognolli/testing/"

@@ -49,9 +49,11 @@
     </div>
 
     <div class="container-fluid" id="content">
+      <% if @config[:subtitle].length > 0 %>
       <div class="row-fluid">
         <p class="lead"><%= @config[:subtitle] %></p>
       </div>
+      <% end %>
       <div class="row-fluid">
       <div class="span8" id="main">
         <%= yield %>
