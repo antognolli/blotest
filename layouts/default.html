@@ -5,6 +5,7 @@
     <title><%= @config[:title] %> - <%= @item[:title] %></title>
 
     <link rel="stylesheet" type="text/css" href="<%= relative_path_to('/css/bootstrap.min.css') %>" media="screen">
+    <link rel="stylesheet" type="text/css" href="<%= relative_path_to('/css/rainbow/' + @config[:syntax_highlight_theme] + '.css') %>" media="screen">
 
     <style type="text/css">
       body {
@@ -100,6 +101,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<%= relative_path_to('/js/jquery-1.7.2.min.js') %>"></script>
     <script src="<%= relative_path_to('/js/bootstrap.min.js') %>"></script>
+    <script src="<%= relative_path_to('/js/rainbow-custom.min.js') %>"></script>
     <script src="<%= relative_path_to('/js/search.js') %>"></script>
     <script>
 	$(document).ready(function() {

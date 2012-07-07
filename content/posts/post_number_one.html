@@ -12,6 +12,29 @@ This is an example post of using the blog template created based on my own
 blog. It was created to make it easier to deploy other blogs or sites with
 [nanoc] If i have the need of doing so.
 
+<pre><code data-language="c">lwan_http_status_t
+gif_beacon(lwan_request_t *request __attribute__((unused)),
+           lwan_response_t *response,
+           void *data __attribute__((unused)))
+{
+    /*
+     * 1x1 transparent GIF image generated with tinygif
+     * http://www.perlmonks.org/?node_id=7974
+     */
+    static char gif_beacon_data[] = {
+        0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00, 0x90,
+        0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x21, 0xF9, 0x04,
+        0x05, 0x10, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01,
+        0x00, 0x01, 0x00, 0x00, 0x02, 0x02, 0x04, 0x01
+    };
+
+    response->mime_type = "image/gif";
+    strbuf_set_static(response->buffer, gif_beacon_data, sizeof(gif_beacon_data));
+
+    return HTTP_OK;
+}
+</code></pre>
+
 It's still raw and can be improved, but already does its job as needed. If you
 have comments or suggestions, just let me know.
 

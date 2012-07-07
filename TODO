@@ -5,5 +5,3 @@ LATER:
  - better README;
  - document code;
  - remove the need to add preview items to /preview/;
- - css style:
-    * code blocks;
