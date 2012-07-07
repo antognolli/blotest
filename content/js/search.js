@@ -77,6 +77,9 @@
       var ai=0, bi=0;
       var result = new Array();
 
+      a.sort(function(x, y) { return x - y });
+      b.sort(function(x, y) { return x - y });
+
       while (ai < a.length && bi < b.length) {
          if (a[ai] < b[bi])
            ai++;
