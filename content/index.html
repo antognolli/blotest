@@ -14,7 +14,7 @@ kind: page
     <p><%= fb_share_button %></p>
     <p><%= twitter_share_button %></p>
     <p><%= gplus_button %></p>
-    <p><%= link_to("comments &raquo", relative_path_to(article), :class=>"btn") %></p>
+    <% if @config[:intense_debate] %><p><%= link_to("comments &raquo", relative_path_to(article), :class=>"btn") %></p><% end %>
     <div class="span1">
     </div>
   </div>
