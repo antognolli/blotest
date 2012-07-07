@@ -4,6 +4,7 @@
 <% end %></small>
 <p></p>
 <%= yield %>
-<p><%= fb_share_button %></p>
-<p><%= twitter_share_button %></p>
-<p><%= gplus_button %></p>
+<% if @config[:fbshare] %><p><%= fb_share_button %></p><% end %>
+<% if @config[:twittershare] %><p><%= twitter_share_button %></p><% end %>
+<% if @config[:gplusshare] %><p><%= gplus_button %></p><% end %>
+
