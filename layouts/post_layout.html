@@ -1,5 +1,7 @@
 <h3><%= link_to_unless_current(@item[:title], @item) %></h3>
-<small>Posted on <%= @item[:created_at] %> in <%= my_button_tags_for(@item, :base_url =>"/tags/", :separator=>' ') %></small>
+<small>Posted on <%= @item[:created_at] %> in <% @item[:tags].each do |t| %>
+<%= my_link_for_tag(t, "/tags/", :label=>"#{t}") %>
+<% end %></small>
 <p></p>
 <%= yield %>
 <p><%= fb_share_button %></p>

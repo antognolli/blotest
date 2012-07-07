@@ -8,7 +8,10 @@ kind: page
 <div class="row-fluid">
   <div class="span12">
     <h3><%= link_to_unless_current(article[:title], relative_path_to(article)) %></h3>
-    <small>Posted on <%= article[:created_at] %> in <%= my_button_tags_for(article, :base_url =>"/tags/", :separator=>' ') %></small>
+    <small>Posted on <%= article[:created_at] %> in
+    <% article[:tags].each do |t| %>
+<%= my_link_for_tag(t, "/tags/", :label=>"#{t}") %>
+<% end %></small>
     <p></p>
     <%= article.compiled_content :rep => :intro, :snapshot => :post %>
     <p><%= fb_share_button %></p>
