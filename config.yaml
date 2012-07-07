@@ -28,9 +28,9 @@ author_uri: "http://rachacuca.org/~antognolli/testing/"
 # custom config
 page_size: 10
 
-gplusshare: true # google plus button
-fbshare: true # facebook like button
-twittershare: true # twitter tweet button
+gplusshare: false # google plus button
+fbshare: false # facebook like button
+twittershare: false # twitter tweet button
 
 ganalytics: false # google analytics
 ga_id: "<your google analytics id here>"
