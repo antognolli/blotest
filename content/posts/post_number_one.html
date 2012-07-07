@@ -6,11 +6,15 @@ author: tester
 tags:
  - example
  - nanoc
+ - code
+ - shell
 ---
 
 This is an example post of using the blog template created based on my own
 blog. It was created to make it easier to deploy other blogs or sites with
 [nanoc] If i have the need of doing so.
+
+And also some C code with neat syntax highlight:
 
 <pre><code data-language="c">lwan_http_status_t
 gif_beacon(lwan_request_t *request __attribute__((unused)),
@@ -36,6 +40,13 @@ gif_beacon(lwan_request_t *request __attribute__((unused)),
 </code></pre>
 
 It's still raw and can be improved, but already does its job as needed. If you
-have comments or suggestions, just let me know.
+have comments or suggestions, just let me know. Some shell commands for good
+measure:
+
+<pre><code data-language="shell">$ cd /tmp
+$ dd if=/dev/zero of=dummy bs=1M count=10
+$ echo $?
+0
+</code></pre>
 
 [nanoc]: http://nanoc.stoneship.org/
