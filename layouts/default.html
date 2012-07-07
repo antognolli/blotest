@@ -68,7 +68,7 @@
           <ul class="nav nav-list">
             <li class="nav-header">Tags</li>
             <% $mytags.each do |t, v| %>
-            <%= my_link_for_tag(t, "/tags/", :label=>"#{t} (#{v})") %>
+            <%= my_link_for_tag(t, "/tags/", :label=>"#{t}", :title=>"Articles: #{v}") %>
             <% end %>
           </ul>
           <p></p>

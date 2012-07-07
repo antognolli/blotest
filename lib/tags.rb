@@ -29,7 +29,8 @@ def my_link_for_tag(tag, base_url, params={})
     base_url = relative_path_to(base_url)
     label = params[:label] || tag
     klass = params[:class] || "label"
-    %[<a href="#{h base_url}#{h tag}" rel="tag" class="#{klass}">#{label}</a>]
+    title = (" title=\"" + params[:title].to_s + "\"") || ""
+    %[<a href="#{h base_url}#{h tag}" rel="tag" class="#{klass}"#{title}>#{label}</a>]
 end
 
 def my_button_for_tag(tag, base_url)
