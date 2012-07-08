@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title><%= @config[:title] %> - <%= @item[:title] %></title>
 
-    <link rel="stylesheet" type="text/css" href="<%= relative_path_to('/css/bootstrap.min.css') %>" media="screen">
+    <link rel="stylesheet" type="text/css" href="<%= relative_path_to('/css/bootswatch/' + @config[:bootswatch_theme] + '.min.css') %>" media="screen">
     <link rel="stylesheet" type="text/css" href="<%= relative_path_to('/css/rainbow/' + @config[:syntax_highlight_theme] + '.css') %>" media="screen">
 
     <style type="text/css">

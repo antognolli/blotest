@@ -39,6 +39,7 @@ intense_debate: false
 intense_id: "<your intense debate handler here>"
 
 syntax_highlight_theme: "github"
+bootswatch_theme: "bootstrap"
 
 # The data sources where nanoc loads its data from. This is an array of
 # hashes; each array element represents a single data source. By default,
