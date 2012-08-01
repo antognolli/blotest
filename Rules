@@ -66,7 +66,7 @@ compile '/preview/*/', :rep => :home do
   layout 'post_layout'
 end
 
-compile '/about/' do
+compile '/*/' do
   filter :erb
   filter :kramdown
   layout 'default'

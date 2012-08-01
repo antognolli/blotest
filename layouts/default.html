@@ -29,6 +29,7 @@
   <body>
     <% feed = @items.find { |i| i.identifier == '/feed/' } %>
     <% home = @items.find { |i| i.identifier == '/' } %>
+    <% other = @items.find { |i| i.identifier == '/other/' } %>
     <% about = @items.find { |i| i.identifier == '/about/' } %>
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -42,6 +43,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><%= my_link_to("<i class=\"icon-home\"></i> Home", home) %></li>
+              <li><%= my_link_to("Other", other) %></li>
               <li><%= my_link_to("About", about) %></li>
             </ul>
             <form class="navbar-search pull-right" action="" style="margin-bottom: 0px">
